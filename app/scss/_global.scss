@@ -1,30 +1,33 @@
 html,
 body {
-    height: 100%;
-        //   @extend %AnPro-Regular;
-        //   color: $text;
-        // position: relative;
-        // overflow-x: hidden;
-        // margin: 0 auto;
-        //   background-color: $background;
+  height: 100%;
+  @extend %Doloman-Light;
+  color: $text;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
+  background-color: $white;
+  font-size: 24px;
 }
+
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
-.container{
-  // max-width: 1200px;
+
+.container {
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 160px;
 }
 
 // .title{
@@ -38,3 +41,48 @@ body {
 //     margin-bottom: 56px;
 //     max-width: fit-content;
 // }
+
+.global-btn {
+  @extend %Ars-Regular;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 50px;
+  border: 1px solid #000;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  position: relative;
+
+  &:hover {
+    border: 1px solid $pink;
+
+    svg {
+      stroke-dashoffset: -480px;
+    }
+  }
+
+
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: $pink;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+
+    &:hover {
+      stroke: $pink;
+      box-shadow: 0 2px 15px rgba(255, 39, 152, 0.5);
+
+    }
+
+  }
+
+
+}
+
+
+
+

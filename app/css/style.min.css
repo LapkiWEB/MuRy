@@ -1,3 +1,17 @@
+@charset "UTF-8";
+.header, .global-btn {
+  font-family: "Arsenal-Regular", sans-serif;
+  font-weight: normal;
+  display: swap;
+}
+
+html,
+body {
+  font-family: "DolomanPavljenko", sans-serif;
+  font-weight: normal;
+  display: swap;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -32,6 +46,16 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: inherit;
 }
 
 input,
@@ -60,6 +84,12 @@ a {
 html,
 body {
   height: 100%;
+  color: #000000;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-size: 24px;
 }
 
 .wrapper {
@@ -86,6 +116,123 @@ body {
 }
 
 .container {
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 160px;
+}
+
+.global-btn {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 50px;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  position: relative;
+}
+.global-btn:hover {
+  border: 1px solid rgb(255, 39, 152);
+}
+.global-btn:hover svg {
+  stroke-dashoffset: -480px;
+}
+.global-btn svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: rgb(255, 39, 152);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+.global-btn svg:hover {
+  stroke: rgb(255, 39, 152);
+  -webkit-box-shadow: 0 2px 15px rgba(255, 39, 152, 0.5);
+          box-shadow: 0 2px 15px rgba(255, 39, 152, 0.5);
+}
+
+@font-face {
+  font-family: "Arsenal-Regular";
+  src: url("../fonts/Arsenal-Regular.eot");
+  src: local("☺"), url("../fonts/Arsenal-Regular.woff") format("woff"), url("../fonts/Arsenal-Regular.ttf") format("truetype"), url("../fonts/Arsenal-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DolomanPavljenko";
+  src: url("../fonts/DolomanPavljenko.eot");
+  src: local("☺"), url("../fonts/DolomanPavljenko.woff") format("woff"), url("../fonts/DolomanPavljenko.ttf") format("truetype"), url("../fonts/DolomanPavljenko.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.logo .logo-img {
+  width: 180px;
+  height: 45px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.nav__list:hover {
+  border-bottom: 1px solid rgb(255, 39, 152);
+}
+.nav__list + .nav__list {
+  margin-left: 25px;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  margin-right: 30px;
+}
+
+.social__list {
+  display: inline-block;
+}
+.social__list .social__list-img {
+  width: 25px;
+  height: 25px;
+}
+.social__list + .social__list {
+  margin-left: 25px;
+}
+.social__list path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.social__list:hover svg path {
+  stroke: rgb(255, 39, 152);
 }

@@ -4,6 +4,74 @@
 @import 'fonts';
 
 // start header
+.header {
+  padding: 20px 0;
+  @extend %Ars-Regular;
+  font-size: 20px;
+}
+
+.logo {
+  .logo-img {
+    width: 180px;
+    height: 45px;
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: all .3s;
+
+  &:hover {
+    border-bottom: 1px solid $pink;
+  }
+
+  &+.nav__list {
+    margin-left: 25px;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  margin-right: 30px;
+
+}
+
+.social__list {
+  display: inline-block;
+
+  .social__list-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  &+.social__list {
+    margin-left: 25px;
+  }
+path{
+  transition: all .3s;
+}
+  &:hover {
+    svg {
+      path {
+        stroke: $pink;
+      }
+
+    }
+  }
+}
+
 
 // end header
 
