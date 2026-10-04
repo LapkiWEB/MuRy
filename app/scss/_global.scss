@@ -4,10 +4,33 @@ body {
   @extend %Doloman-Light;
   color: $text;
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   margin: 0 auto;
   background-color: $white;
   font-size: 24px;
+}
+
+body.menu-opened {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  margin: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $white;
+  position: relative;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  // background-color: green;
+  background: $pink;
+  border-radius: 5px;
+  border: 1px solid $text;
+
 }
 
 .wrapper {
@@ -29,7 +52,12 @@ body {
   margin: 0 auto;
   padding: 0 160px;
 }
-
+.title-h1{
+  @extend %Ars-Regular;
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 120px;
+}
 // .title{
 //     @extend %AlGrey-Bold;
 //     font-size: 36px;
@@ -51,6 +79,8 @@ body {
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
   position: relative;
+  width: fit-content;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid $pink;
@@ -59,9 +89,6 @@ body {
       stroke-dashoffset: -480px;
     }
   }
-
-
-
   svg {
     position: absolute;
     left: 0;

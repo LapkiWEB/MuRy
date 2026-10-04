@@ -5,9 +5,37 @@
 
 // start header
 .header {
-  padding: 20px 0;
+  padding: 10px 0;
   @extend %Ars-Regular;
   font-size: 20px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9)
+}
+
+.header__fixed {
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation-name: show_header;
+  animation-duration: 1s;
+  z-index: 100;
+}
+
+
+@keyframes show_header {
+  0% {
+    opacity: 0;
+    top: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 .logo {
@@ -27,6 +55,7 @@
   display: inline-block;
   border-bottom: 1px solid transparent;
   transition: all .3s;
+  width: fit-content;
 
   &:hover {
     border-bottom: 1px solid $pink;
@@ -59,9 +88,11 @@
   &+.social__list {
     margin-left: 25px;
   }
-path{
-  transition: all .3s;
-}
+
+  path {
+    transition: all .3s;
+  }
+
   &:hover {
     svg {
       path {
@@ -73,6 +104,131 @@ path{
 }
 
 
+.mob-menu {
+  display: none;
+}
+
+.menu__btn {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+  padding-top: 4px !important;
+  border-radius: 5px;
+  z-index: 3;
+
+  &.active {
+    .row {
+      height: 3px;
+    }
+
+    .row1 {
+      transform: rotate(45deg);
+      position: relative;
+      top: 8px;
+      background-color: $text;
+      transition: all .5s ease 0s;
+    }
+
+    .row2 {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -1px;
+      background-color: $text;
+      transition: all .5s ease 0s;
+    }
+
+    .row3 {
+      opacity: 0;
+    }
+  }
+}
+
+.row {
+  width: 25px;
+  background-color: $text;
+  height: 3px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  transition: all .3s;
+  margin: 6px auto;
+}
+
+.row3 {
+  width: 20px;
+  margin: 6px 0px 6px 14px;
+}
+
 // end header
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// start section main-screen
+.main-screen {
+  // height: 1080px;
+  height: 800px;
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 67px;
+}
+
+.main-screen__subtitle {
+  @extend %Doloman-Light;
+  font-size: 48px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.main-screen__inner {
+  padding-left: 160px;
+  // display: flex;
+  // justify-content: space-between;
+  height: 100%;
+  position: relative;
+
+}
+
+.main-screen__item {
+  position: absolute;
+  max-width: 800px;
+  width: 100%;
+}
+
+.main-screen__title {
+  padding-top: 120px;
+}
+
+.main-screen__item-img {
+  background-image: url("../images/content/main-str-header-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  max-width: 1140px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+}
+
+// end section main-screen
 @import 'media';
